@@ -44,7 +44,7 @@
         {% endif %}
     </div>
     
-    {{ form.submit(class="btn btn-primary") }}
+    {{ form.submit(class="btn btn-primary", onclick="return confirm('Are you sure you want to update this contact?')") }}
     <a href="{{ url_for('list_contacts') }}" class="btn btn-secondary">Cancel</a>
 </form>
 {% endblock %} 
