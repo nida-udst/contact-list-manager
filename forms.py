@@ -12,5 +12,7 @@ class ContactForm(FlaskForm):
     type = SelectField('Type', 
                       choices=[('Personal', 'Personal'), 
                               ('Work', 'Work'), 
+                              ('Student','Student'),
+                              ('Family','Family'),
                               ('Other', 'Other')])
     submit = SubmitField('Submit') 
