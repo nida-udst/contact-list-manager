@@ -5,10 +5,20 @@
 <form method="POST">
     {{ form.csrf_token }}
     <div class="mb-3">
-        {{ form.name.label(class="form-label") }}
-        {{ form.name(class="form-control") }}
-        {% if form.name.errors %}
-            {% for error in form.name.errors %}
+        {{ form.first.label(class="form-label") }}
+        {{ form.first(class="form-control") }}
+        {% if form.first.errors %}
+            {% for error in form.first.errors %}
+                <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        {{ form.last.label(class="form-label") }}
+        {{ form.last(class="form-control") }}
+        {% if form.last.errors %}
+            {% for error in form.last.errors %}
                 <div class="text-danger">{{ error }}</div>
             {% endfor %}
         {% endif %}
